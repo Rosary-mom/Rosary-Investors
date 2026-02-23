@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <title>Simulationen: ROI-Prognosen</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; color: #333; }
-        h1 { color: #0056b3; }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #ffffff; color: #000000; line-height: 1.6; } /* Bio2.0-weiß */
+        h1 { color: #00008b; font-size: 2em; }
         p { line-height: 1.6; }
-        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { cursor: pointer; background-color: #f2f2f2; }
-        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
-        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; font-family: monospace; } /* Monospace für Tech-Tabelle */
+        th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+        th { cursor: pointer; background-color: #e6e6fa; } /* Lavendel-Header */
+        code { background-color: #f0f8ff; padding: 2px 4px; border-radius: 3px; font-family: monospace; }
+        pre { background-color: #f0f8ff; padding: 10px; border: 1px dashed #aaa; overflow-x: auto; border-radius: 5px; } /* Bio2.0-Code-Block */
+        a { color: #0000ff; text-decoration: underline; }
+        a:hover { color: #ff0000; }
     </style>
 </head>
 <body>
     <h1>ROI-Prognosen Simulation</h1>
-    <p>Beispiel: 6-Monats-ROI für Rosary-Robots mit Q-Accus (520% kumulativ, basierend auf Verkaufs-Wachstum). Die Tabelle ist sortierbar (klicke auf Header).</p>
+    <p>Beispiel: 6-Monats-ROI für Rosary-Robots mit Q-Accus (520% kumulativ, basierend auf Verkaufs-Wachstum). Die Tabelle ist sortierbar (klicke auf Header). Details zu Annahmen: Initial-Invest 100.000 €, Wachstum von 20 auf 120 Einheiten/Monat.</p>
     <table id="roiTable">
         <thead>
             <tr>
@@ -36,7 +38,7 @@
         </tbody>
     </table>
     <script>
-        // JS für Sortierung (Bio2.0-ähnlich: Einfacher Code-Block)
+        // JS für Sortierung
         const table = document.getElementById('roiTable');
         const headers = table.querySelectorAll('th');
         headers.forEach((header, index) => {
@@ -51,7 +53,7 @@
             });
         });
     </script>
-    <p>Für Transparenz: Hier der zugrunde liegende <code>JS-Code</code> für die Sortierung (inspiriert von Bio2.0's technischen Erklärungen):</p>
+    <p>Für Transparenz: Hier der zugrunde liegende JS-Code für die Sortierung (Bio2.0-Stil):</p>
     <pre><code>// Sortier-Funktion
 const table = document.getElementById('roiTable');
 const headers = table.querySelectorAll('th');
