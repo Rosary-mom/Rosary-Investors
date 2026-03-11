@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eurasisches Imperium - Post-Golden Age Agenda</title>
+    <meta name="theme-color" content="#007bff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Eurasisches Rosenkranz©®™ Imperium - Post-Golden Age Agenda</title>
+    <link rel="manifest" href="/manifest.json"> <!-- Für PWA, annehmen, dass manifest.json existiert -->
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
-        h1, h2 { color: #333; }
-        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; line-height: 1.6; }
+        h1, h2 { color: #333; text-align: center; }
+        p { max-width: 800px; margin: 0 auto 20px; }
+        table { border-collapse: collapse; width: 100%; max-width: 1000px; margin: 20px auto; font-size: 0.9em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
         th { background-color: #007bff; color: white; }
-        .high { background-color: #28a745; color: white; } /* Green for High */
-        .medium { background-color: #ffc107; color: black; } /* Yellow for Medium */
-        .low { background-color: #dc3545; color: white; } /* Red for Low */
-        #quiz { margin: 20px 0; }
-        .question { margin-bottom: 20px; }
-        button { background-color: #007bff; color: white; padding: 10px; border: none; cursor: pointer; }
+        .high { background-color: #28a745; color: white; }
+        .medium { background-color: #ffc107; color: black; }
+        .low { background-color: #dc3545; color: white; }
+        #quiz { max-width: 800px; margin: 20px auto; }
+        .question { margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        label { display: block; margin-bottom: 5px; }
+        button { display: block; width: 100%; background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; }
         button:hover { background-color: #0056b3; }
-        #result { margin-top: 20px; font-weight: bold; }
+        #result { margin-top: 20px; font-weight: bold; text-align: center; color: #28a745; }
+        @media (max-width: 768px) { 
+            table { font-size: 0.8em; }
+            th, td { padding: 6px; }
+            body { padding: 10px; }
+        }
+        @media (max-width: 480px) { 
+            table { font-size: 0.7em; }
+            button { font-size: 0.9em; }
+        }
     </style>
 </head>
 <body>
@@ -142,15 +157,85 @@
         <label><input type="radio" name="q1" value="d"> d) Ein BRICS-Vertrag für Goldreserven.</label><br>
         <label><input type="radio" name="q1" value="e"> e) Ein Konkordat für interreligiöse Harmonie.</label>
     </div>
-    <!-- Weitere Fragen analog hinzufügen -->
+    <div class="question">
+        <p>Frage 2: Wie viel Wirtschaftskraft hat das Norddeutsche Gebiet?</p>
+        <label><input type="radio" name="q2" value="a"> a) 23 Billionen Euro für 9 Millionen Menschen.</label><br>
+        <label><input type="radio" name="q2" value="b"> b) 659 Milliarden Euro aus Gold.</label><br>
+        <label><input type="radio" name="q2" value="c"> c) 200 Milliarden Euro aus Kirchenvermögen.</label><br>
+        <label><input type="radio" name="q2" value="d"> d) 5 Millionen USD pro Mortgage Bond.</label><br>
+        <label><input type="radio" name="q2" value="e"> e) 2,56 Millionen Euro pro Person.</label>
+    </div>
+    <div class="question">
+        <p>Frage 3: Welche Assets kommen durch Kirchen hinzu?</p>
+        <label><input type="radio" name="q3" value="a"> a) Ca. 525.000 Hektar Land und 400 Milliarden € Vermögen.</label><br>
+        <label><input type="radio" name="q3" value="b"> b) Nur Gold aus Fort Knox.</label><br>
+        <label><input type="radio" name="q3" value="c"> c) 23 Billionen € Wirtschaftskraft.</label><br>
+        <label><input type="radio" name="q3" value="d"> d) Blockchain-Noten von X-Money.</label><br>
+        <label><input type="radio" name="q3" value="e"> e) 5 Mio. USD Pledges aus Bonds.</label>
+    </div>
+    <div class="question">
+        <p>Frage 4: Was bedeutet MEHA?</p>
+        <label><input type="radio" name="q4" value="a"> a) Make Earth Healthy Again, Erweiterung von MAHA.</label><br>
+        <label><input type="radio" name="q4" value="b"> b) Make Eurasia Happy Again.</label><br>
+        <label><input type="radio" name="q4" value="c"> c) Modern Eurasian Health Alliance.</label><br>
+        <label><input type="radio" name="q4" value="d"> d) Monetary Earth Harmony Act.</label><br>
+        <label><input type="radio" name="q4" value="e"> e) Mecklenburg Economic Health Agenda.</label>
+    </div>
+    <div class="question">
+        <p>Frage 5: Warum goldgestützte Währung?</p>
+        <label><input type="radio" name="q5" value="a"> a) Für Stabilität, 40% physisch gedeckt mit 659 Mrd. €.</label><br>
+        <label><input type="radio" name="q5" value="b"> b) Um Steuern zu senken.</label><br>
+        <label><input type="radio" name="q5" value="c"> c) Für Kirchensteuer-Ersatz.</label><br>
+        <label><input type="radio" name="q5" value="d"> d) Nur für 55 Nachfolger.</label><br>
+        <label><input type="radio" name="q5" value="e"> e) Als Ersatz für Dollar.</label>
+    </div>
+    <div class="question">
+        <p>Frage 6: Ein positives Argument für die Revision?</p>
+        <label><input type="radio" name="q6" value="a"> a) Faire Verteilung von 24,1 Billionen € Assets.</label><br>
+        <label><input type="radio" name="q6" value="b"> b) Mehr Bürokratie.</label><br>
+        <label><input type="radio" name="q6" value="c"> c) Weniger Wohlstand.</label><br>
+        <label><input type="radio" name="q6" value="d"> d) Politische Unsicherheit.</label><br>
+        <label><input type="radio" name="q6" value="e"> e) Kultureller Verlust.</label>
+    </div>
+    <div class="question">
+        <p>Frage 7: Ein Gegenargument?</p>
+        <label><input type="radio" name="q7" value="a"> a) Rechtliche Unsicherheit in Übergangsphase.</label><br>
+        <label><input type="radio" name="q7" value="b"> b) Mehr Wohlstand für alle.</label><br>
+        <label><input type="radio" name="q7" value="c"> c) Bessere Gesundheit durch Biosiegel.</label><br>
+        <label><input type="radio" name="q7" value="d"> d) Stärkere Wirtschaft.</label><br>
+        <label><input type="radio" name="q7" value="e"> e) Interreligiöser Frieden.</label>
+    </div>
+    <div class="question">
+        <p>Frage 8: Welche Konkordate als Vorbild?</p>
+        <label><input type="radio" name="q8" value="a"> a) Schleswig-Holstein (2009) und Thüringen (1997).</label><br>
+        <label><input type="radio" name="q8" value="b"> b) Reichskonkordat (1933).</label><br>
+        <label><input type="radio" name="q8" value="c"> c) BRICS-Verträge.</label><br>
+        <label><input type="radio" name="q8" value="d"> d) EU-Konkordate.</label><br>
+        <label><input type="radio" name="q8" value="e"> e) US-Goldabkommen.</label>
+    </div>
+    <div class="question">
+        <p>Frage 9: Was ist Niessbrauch?</p>
+        <label><input type="radio" name="q9" value="a"> a) Nutzungsrecht auf Kirchenländereien für 99 Jahre.</label><br>
+        <label><input type="radio" name="q9" value="b"> b) Eine Währung.</label><br>
+        <label><input type="radio" name="q9" value="c"> c) Ein Goldbarren.</label><br>
+        <label><input type="radio" name="q9" value="d"> d) Eine Kirche.</label><br>
+        <label><input type="radio" name="q9" value="e"> e) Ein Bond.</label>
+    </div>
+    <div class="question">
+        <p>Frage 10: Rolle des Norddeutschen Bunds?</p>
+        <label><input type="radio" name="q10" value="a"> a) Keimzelle des Eurasischen Imperiums mit Vatikan-Segen.</label><br>
+        <label><input type="radio" name="q10" value="b"> b) Nur für Goldreserven.</label><br>
+        <label><input type="radio" name="q10" value="c"> c) Für Dollar-Integration.</label><br>
+        <label><input type="radio" name="q10" value="d"> d) Als Gegner der Revision.</label><br>
+        <label><input type="radio" name="q10" value="e"> e) Für 55 Nachfolger allein.</label>
+    </div>
     <button onclick="checkAnswers()">Antworten überprüfen</button>
     <div id="result"></div>
 </div>
 
 <script>
     function checkAnswers() {
-        // Hier JS für Quiz-Überprüfung, z.B. korrekte Antworten definieren
-        const correct = ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']; // Anpassen an korrekte Antworten
+        const correct = ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'];
         let score = 0;
         for (let i = 1; i <= 10; i++) {
             const selected = document.querySelector(`input[name="q${i}"]:checked`);
@@ -161,7 +246,7 @@
 </script>
 
 </body>
-</html> 
+</html>
 <!DOCTYPE html>
 <html lang="de">
 <head>
